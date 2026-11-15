@@ -2,113 +2,126 @@
 
 **Assignment:** Assignment 2 – Control Flow, Strings and Functions  
 **Course:** CSA08 – Python Programming  
-**Student:** Karthikeyan S  
-**Register Number:** 192365059D (confirm the exact format shown in your portal before final submission)  
+**Student:** S Karthikeyan  
+**Register Number:** 192365059  
 **Nature:** Individual  
-**Platform:** macOS  
-**Python command:** `python3`  
-**Python version:** Run `python3 --version` and record the exact result.
+**Platform:** Windows 10  
+**Python command:** `python`  
+**Python version used:** Python 3.11.6
 
 **GitHub repository:** https://github.com/Karthikdj2028/CSA08-192365059-Assignment2
 
 ## Project overview
 
-This project covers the seven questions in Assignment 2 using beginner-friendly Python. The main concepts are `if`, `if-else`, `if-elif-else`, `while`, `for`, `break`, `continue`, `pass`, loop `else`, string methods and slicing, functions, parameters, scope, recursion, memoisation and performance measurement.
+This project covers all seven questions in Assignment 2 using beginner-friendly Python: conditions, loops, string methods and slicing, functions, parameters, scope, recursion, memoisation and performance measurement.
 
 | Folder | Assignment question | Main work |
 |---|---|---|
 | Task01 | Q1 – Decisions with Many Boundaries | Separate `if` versus `if-elif-else`, boundaries, `match-case`, lookup list |
-| Task02 | Q2 – Loops that Count Attempts | `while`, `for`, blank OTP handling, loop `else`, recursion alternative |
+| Task02 | Q2 – Loops that Count Attempts | `while`, `for`, blank OTP handling, `break`, `continue`, `pass`, loop `else`, recursion alternative |
 | Task03 | Q3 – Vehicle Registration Validator | Normalising, validating and formatting strings without regular expressions |
 | Task04 | Q4 – Building Long Text | `+=`, `join()`, f-strings, measurements at 1,000 / 10,000 / 200,000 lines |
-| Task05 | Q5 – Functions, Parameters and Scope | Mutable default argument bug, corrected list handling, GST, local/global/nonlocal |
-| Task06 | Q6 – Recursion and Its Limits | Naive recursion, memoisation, function-call counts, recursion limit, loop solution |
+| Task05 | Q5 – Functions, Parameters and Scope | Mutable default argument bug, corrected list handling, parameters and scope |
+| Task06 | Q6 – Recursion and Its Limits | Naive recursion, memoisation, function-call counts, recursion limit and loop solution |
 | Task07 | Q7 – Diagnose, Redesign and Validate | Streaming a large statement to a file and comparing it with the original builder |
 
-Each folder contains Python files, a short task README and an `evidence/` folder. Save your own screenshots and raw timing files there after running on your Mac.
+Each task folder contains Python source files or written analysis, a task README and an `evidence/` folder. Task04 and Task07 include raw CSV timing data.
 
 ## Python and libraries
 
-- Python 3.10 or later is required for the `match-case` alternative in Task01. Python 3.13.15 was used for the prepared example code; enter the version actually installed on your Mac.
-- Third-party packages: none.
-- Standard-library modules: `time`, `io`, `sys`, `functools`, `csv`, `os`, and `tempfile`.
-- `requirements.txt` is included. No `pip install` command is needed.
+- Python 3.11.6 on Windows 10, run with `python`.
+- Third-party libraries: none.
+- Standard-library modules used include `time`, `io`, `sys`, `functools`, `csv`, `os` and `tempfile`.
+- `requirements.txt` is included. No `pip install` is needed.
+- The `match-case` alternative in Q1 is supported by Python 3.11.6.
 
-## Setup on Mac
+## Setup on Windows
 
-Open this folder in VS Code. Select **Terminal → New Terminal**. Ensure the terminal is at the project root (the folder containing this README).
+Open the inner `CSA08-192365059-Assignment2` folder in VS Code. Select **Terminal → New Terminal**. Confirm the terminal is in the folder containing this README.
 
-```bash
-python3 --version
+```powershell
+python --version
+git --version
 pwd
 ```
 
-Optional virtual environment:
+Expected Python version:
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 --version
+```text
+Python 3.11.6
 ```
 
 ## Run commands
 
-Run these from the project root. For interactive tasks, the sample scripts are deterministic demonstrations; you can also call their functions with your own test data.
+Run these commands from the project root folder:
 
 | Task | Command | What to check |
 |---|---|---|
-| Task01 | `python3 Task01/decisions.py` | Eight households, including 100 / 101 / 200 / 201 unit boundaries; compare separate `if` and `if-elif-else`. |
-| Task02 | `python3 Task02/otp_loops.py` | While loop and for loop; blank entries do not consume attempts; loop `else` locks after three wrong attempts. |
-| Task03 | `python3 Task03/plate_validator.py` | Complete the Code functions, six predictions, valid/invalid results and receipt formatting. |
-| Task04 | `python3 Task04/string_building.py` | `+=`, `join()` and f-string builders; three-run average at 1,000 / 10,000 / 200,000 lines; CSV results. |
-| Task05 | `python3 Task05/orders_and_scope.py` | Mutable default bug, fixed orders for three customers, defaults tuple and scope examples. |
-| Task06 | `python3 Task06/stair_ways.py` | Answers 1–6, call counts for 10 / 20 / 25 / 30, recursion-limit demonstration and iterative n=1,000 result. |
-| Task07 | `python3 Task07/streaming_redesign.py` | Original versus streaming redesign using the same 200,000 generated lines; time, output validation and file-size evidence. |
+| Task01 | `python Task01/decisions.py` | Eight households, including 100 / 101 / 200 / 201 unit boundaries; compare separate `if` and `if-elif-else`. |
+| Task02 | `python Task02/otp_loops.py` | While loop and for loop; blank entries do not consume attempts; loop `else` locks after three wrong attempts. |
+| Task02 | `python Task02/recursive_otp_alternative.py` | Recursive alternative and its stack-space explanation. |
+| Task03 | `python Task03/plate_validator.py` | Normalising, validation, six cases, receipt formatting and slicing. |
+| Task04 | `python Task04/string_building.py` | `+=`, `join()` and f-string builders; three-run averages at 1,000 / 10,000 / 200,000 lines; writes `Task04/timings.csv`. |
+| Task04 | `python Task04/string_alternatives.py` | StringIO and direct-file-writing alternatives. |
+| Task05 | `python Task05/orders_and_scope.py` | Mutable default bug, independent orders for three customers, defaults tuple and scope examples. |
+| Task06 | `python Task06/stair_ways.py` | Answers 1–6, function-call counts for 10 / 20 / 25 / 30, recursion-limit demonstration and iterative n=1,000 result. |
+| Task07 | `python Task07/streaming_redesign.py` | Original versus streaming redesign on 200,000 generated lines; writes `Task07/q7_comparison.csv` and `Task07/statement_200000.txt`. |
 
-Additional Task04 alternative implementations:
+## Evidence
 
-```bash
-python3 Task04/string_alternatives.py
-```
+Screenshots supplied from the student's Windows 10 / Python 3.11.6 runs are saved in each task's `evidence/` folder. The keyboard-checker image was excluded because it is unrelated to the assignment.
 
-## Evidence instructions
+- Q1 includes the eight boundary cases and comparison of the two decision structures.
+- Q2 includes the while-loop and recursive demonstration. The supplied for-loop capture shows the beginning of that section; the full output can be reproduced by running the command above.
+- Q3 includes normalised valid/invalid registrations and receipt formatting.
+- Q4 includes three-run averages and its StringIO/file alternatives. Raw readings are in `Task04/timings.csv`.
+- Q5 includes the mutable-default bug, corrected independent orders and scope demonstrations.
+- Q6 includes answers for n=1 to 6, call counts through n=30 and the memoised recursion limit at n=1,000. The iterative n=1,000 output is produced after the error message; run the program and scroll to the end to see the final line.
+- Q7 includes three original/streaming timing runs, average time, record count, file size and exact-output validation. Raw readings are in `Task07/q7_comparison.csv`.
 
-1. Run each command on your Mac.
-2. Capture the full terminal output with **Shift + Command + 4**.
-3. Save screenshots inside that task's `evidence/` directory.
-4. Task04 and Task07 also generate CSV files containing raw benchmark results. Keep those files with the task evidence.
-5. Do not copy example timings from another computer. Record your own averages in the report.
-6. For Q1, keep the prediction table in the report before the observed output.
-7. For Q6 and Q7, include call counts / timing tables; a screenshot alone is not enough.
+## Measured results
 
-## GitHub commit workflow
+### Q4 – String building (average of three runs)
 
-Create a public repository named `CSA08-192365059-Assignment2` (or use Private and add the faculty as a collaborator). For each task, run the program, save evidence, then commit the task separately.
+| Lines | `+=` (s) | `join()` (s) | f-string builder (s) |
+|---:|---:|---:|---:|
+| 1,000 | 0.000364 | 0.000023 | 0.000203 |
+| 10,000 | 0.003862 | 0.000368 | 0.002280 |
+| 200,000 | 0.691578 | 0.007892 | 0.054115 |
 
-Example:
+The three methods produced identical text (3,048,890 characters) in the measured run.
 
-```bash
-git add Task01
-git commit -m "feat(task01): analyse subsidy decision boundaries"
-git push origin main
-```
+### Q7 – Original versus streaming redesign (200,000 lines)
 
-Use one task folder per commit for Task02 through Task07. Avoid a single final bulk upload. Do not use `git push --force`.
+| Measure | Original `+=` | Streaming |
+|---|---:|---:|
+| Run 1 (s) | 0.603374 | 0.138529 |
+| Run 2 (s) | 0.686755 | 0.144824 |
+| Run 3 (s) | 0.485828 | 0.151262 |
+| Average (s) | 0.591986 | 0.144871 |
 
-## Before submission
+The average streaming time was about 4.09 times faster in this run. Both versions produced matching statement text. Timings are specific to the recorded Windows 10 / Python 3.11.6 run.
 
-- [ ] Confirm register-number format against the portal (the portal displays `192365059D`).
-- [ ] Record the exact `python3 --version` output.
-- [ ] Execute all seven task programs on your Mac.
-- [ ] Replace timing placeholders in the report using your own CSV/output results.
-- [ ] Save evidence screenshots in all task folders.
-- [ ] Commit each task separately and push it to GitHub.
-- [ ] Add the working GitHub URL to the report cover page and portal.
-- [ ] Check `git status` and `git log --oneline`.
+## GitHub commit history
+
+The assignment folders were committed and pushed separately. The final terminal verification on 15 November 2026 showed the seven task commits (Task01–Task07), the initial README/setup commit, branch `main` tracking `origin/main`, and a clean working tree.
+
+## Final submission checklist
+
+- [x] Repository name: `CSA08-192365059-Assignment2`.
+- [x] README includes student name, register number, Python version, run commands and result notes.
+- [x] `requirements.txt` is present; no third-party packages are required.
+- [x] Task01–Task07 source files and evidence folders are uploaded.
+- [x] Q4 and Q7 raw CSV timing data are included.
+- [x] At least one separate commit per task is pushed to GitHub.
+- [x] GitHub repository is public.
+- [x] Final report includes the GitHub repository URL.
+
+**Submission repository URL:** https://github.com/Karthikdj2028/CSA08-192365059-Assignment2
 
 ## Important assumptions
 
-- Q1 does not state the monetary amount of each subsidy. The program therefore reports the eligibility category only and does not invent a rupee amount.
-- Q2 uses sample OTP values in a list so both loop versions can be executed and compared repeatedly. The sample expected OTP is `482916`.
-- Q5 uses an illustrative GST rate of 5% only to demonstrate returning both total and GST; replace it only if your instructor specifies a different rate.
-- Q7 uses Q4's long-statement problem as the redesign target. The revised version streams generated lines to a file, reducing the need to hold the complete statement string in memory.
+- Q1 does not state monetary amounts for subsidies. The program reports eligibility categories only.
+- Q2 uses sample OTP values so the two loop designs can be executed repeatedly; the sample expected OTP is `482916`.
+- Q5 uses 5% GST only as an example to demonstrate returning multiple values; the assignment does not specify a GST rate.
+- Q7 selects Q4's long-statement problem as the redesign target. The revised program streams generated lines to a file rather than retaining one complete large string in memory.
