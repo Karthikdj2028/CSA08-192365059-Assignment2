@@ -1,0 +1,1 @@
+Call 1:Rs2.50;SMS 2:Rs0.10;Call 3:Rs1.75;
